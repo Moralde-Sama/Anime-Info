@@ -1,0 +1,107 @@
+@import '../components/card.scss';
+
+$image-width: 12rem;
+@mixin fas-span {
+    font-weight: normal;
+    color: $color-black;
+    margin-left: .2rem;
+    font-size: .8rem;
+    padding-bottom: 5px;
+}
+
+.card {
+    position: relative;
+    background-color: $color-white;
+    z-index: 3;
+
+    &-anime--image {
+        border-bottom-left-radius: .3rem;
+        border-top-left-radius: .3rem;
+        width: $image-width;
+        height: 100%;
+    }
+    &-anime--title {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: rgba($color-black, .5);
+        width: $image-width;
+        border-bottom-left-radius: .3rem;
+        p {
+            text-align: left;
+            font-size: 1rem;
+            color: $color-white;
+            margin: 1rem;
+        }
+    }
+    &-anime--content {
+        position: absolute;
+        top: 0;
+        left: $image-width;
+        padding: .5rem;
+        height: 100%;
+
+        .options {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: $color-black;
+        }
+
+        .episodes {
+            font-size: .7rem;
+            margin-top: .2rem;
+        }
+
+        .time-left {
+            font-weight: bold;
+        }
+
+        .description {
+            font-size: .8rem;
+            margin-top: .5rem;
+        }
+
+        .score {
+            color: green;
+
+            span {
+                @include fas-span;
+            }
+        }
+
+        .rating {
+            color: red;
+
+            span {
+                @include fas-span;
+            }
+        }
+
+        p:not(:last-child) {
+            margin-bottom: .3rem;
+        }
+
+        .genres {
+            position: absolute;
+            bottom: 0;
+            list-style: none;
+            overflow: hidden;
+            float:left;
+            
+            li {
+                float: right;
+                font-size: .8rem;
+                background-color: $color-secondary;
+                border-radius: 250px;
+                padding: .2rem .5rem;
+                color: white;
+                cursor: default;
+
+                &:not(:first-child) {
+                    margin-right: .5rem;
+                }
+            }
+        }
+    }
+}
