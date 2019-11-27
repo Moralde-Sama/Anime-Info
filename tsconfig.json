@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "noImplicitAny": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": false,
+        "outDir": "build/js/landingpage",
+        
+    },
+    "files": [
+        "assets/typescript/landingpage.ts",
+    ]
+}

@@ -2,10 +2,13 @@
   "name": "anime_info",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "start": "php -S localhost:8000",
-    "sass:watch": "sass --watch sass/landingpage/main.scss build/landingpage.css"
+    "sass:watch": "sass --watch assets/sass/landingpage/main.scss build/landingpage.css",
+    "sass:build": "sass --style compressed assets/sass/landingpage/main.scss build/landingpage.css",
+    "js:compile": "webpack --mode=development",
+    "build": "webpack --mode=production && npm run sass:build"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +16,8 @@
     "bulma": "^0.8.0"
   },
   "devDependencies": {
-    "@fortawesome/fontawesome-free": "^5.11.2"
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }
