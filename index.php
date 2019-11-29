@@ -127,7 +127,7 @@
             </div>
         </div>
     </div>
-    <div id="myModal" class="modal">
+    <div id="myModal" class="modal" style="display: none">
 
         <!-- Modal content -->
         <div class="modal-content">
