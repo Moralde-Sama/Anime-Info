@@ -18,6 +18,6 @@
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.11.2",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.12"
   }
 }
